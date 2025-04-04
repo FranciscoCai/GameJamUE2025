@@ -20,6 +20,7 @@ public class MariachiMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(222);
         if (collision.gameObject.CompareTag("Nebulosa"))
         {
             Debug.Log(1);
