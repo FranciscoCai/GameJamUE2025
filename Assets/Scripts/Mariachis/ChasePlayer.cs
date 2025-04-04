@@ -3,9 +3,10 @@ using UnityEngine;
 public class ChasePlayer : MonoBehaviour
 {
     public float detectionRadius = 15f;       
-    public float moveSpeed = 5f;              
+    public float moveSpeed = 5f;
+    public MariachiMovement mariachiMovement;
 
-    public LayerMask detectionLayer;          
+    public LayerMask detectionLayer;
 
     private Transform player;
     private bool isChasing = false;
@@ -29,6 +30,11 @@ public class ChasePlayer : MonoBehaviour
         {
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * moveSpeed * Time.deltaTime;
+            mariachiMovement.enabled = false;
+        }
+        if(!isChasing)
+        {
+            mariachiMovement.enabled = true;
         }
     }
 
