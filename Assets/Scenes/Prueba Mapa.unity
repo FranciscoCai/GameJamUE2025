@@ -2332,7 +2332,11 @@ MonoBehaviour:
   onTrack: 0
   particleSystem: {fileID: 1918570543}
   newColor: {r: 1, g: 0, b: 0, a: 1}
+  detectionRadius: 15
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1806815674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8497991240059711769, guid: d491b6e3c9fcef142a84a61816580896, type: 3}
