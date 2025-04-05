@@ -1,15 +1,20 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
-public class ChangeAlpha : MonoBehaviour
+public class FadeInCaminos : MonoBehaviour
 {
     public Renderer objectRenderer;
-    public float fadeDuration = 2f;
-
+    public float fadeDuration = 7f;
     void Start()
     {
         Material mat = objectRenderer.material;
         StartCoroutine(FadeOutMaterial(mat, fadeDuration));
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     private IEnumerator FadeOutMaterial(Material mat, float duration)
@@ -21,11 +26,9 @@ public class ChangeAlpha : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
+            float newAlpha = Mathf.Lerp(startAlpha, 1f, elapsed / duration);
             mat.color = new Color(color.r, color.g, color.b, newAlpha);
             yield return null;
         }
-
-        mat.color = new Color(color.r, color.g, color.b, 0f);
     }
 }
