@@ -11,6 +11,7 @@ public class InstantiatePentagrama : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Beluga"))
         {
+            Debug.Log(1);
             StartCoroutine(PentagramaInstantiate());
         }
     }
