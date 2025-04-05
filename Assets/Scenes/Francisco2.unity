@@ -5447,6 +5447,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: beluga animation
       objectReference: {fileID: 0}
+    - target: {fileID: 8839790072285329124, guid: a1faed9406e06234aba5172bd64f6622, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839790072285329124, guid: a1faed9406e06234aba5172bd64f6622, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c93f1608b4d0b884d8eefaa099466b8b, type: 2}
+    - target: {fileID: 8839790072285329124, guid: a1faed9406e06234aba5172bd64f6622, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c7c1cbda60c773e43a001813d13bab84, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
