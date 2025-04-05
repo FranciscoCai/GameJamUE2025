@@ -20,12 +20,10 @@ public class MariachiMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(222);
         if (collision.gameObject.CompareTag("Nebulosa"))
         {
-            Debug.Log(1);
             Vector3 normal = collision.contacts[0].normal;
-            moveDirection = Vector3.Reflect(moveDirection, normal);
+            moveDirection = Vector3.Reflect(moveDirection, normal) * (3 / 2);
         }
     }
 }
