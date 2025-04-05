@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         bool isBoosting = boostAction.action.IsPressed();
         if (isBoosting)
         {
-            cafeini += dropBoost * Time.deltaTime;
+            cafeini -= dropBoost * Time.deltaTime;
         }
     }
 }
