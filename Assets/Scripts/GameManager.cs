@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
         if(cafeini<=0)
         {
-            SceneManager.LoadScene("DronDemo");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
