@@ -1183,6 +1183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d07a0083ea2bbd4596b34d78a61e0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetImage: {fileID: 1186109538}
+  vuelo: {fileID: 2875265820503790313}
   target: {fileID: 4567975019229888500}
   speed: 30
 --- !u!114 &742685378
@@ -1250,27 +1252,9 @@ MonoBehaviour:
           z: 0.00990355
           w: 0.99517715
     - Position:
-        x: 63.8
-        y: 1.4
-        z: 118.2
-      TangentIn:
-        x: 0
-        y: 0
-        z: -40.7
-      TangentOut:
-        x: 0
-        y: 0
-        z: 40.7
-      Rotation:
-        value:
-          x: -0.08669234
-          y: -0.07219313
-          z: -0.1606588
-          w: 0.9805414
-    - Position:
         x: 20.5
         y: -40.8
-        z: 187.36
+        z: 246.4
       TangentIn:
         x: 0
         y: 0
@@ -1281,33 +1265,11 @@ MonoBehaviour:
         z: 17.89
       Rotation:
         value:
-          x: 0.14244285
-          y: 0.119485155
-          z: -0.017325321
-          w: 0.9824119
-    - Position:
-        x: 2.5
-        y: -50
-        z: 232.84
-      TangentIn:
-        x: 0
-        y: 0
-        z: -30.3
-      TangentOut:
-        x: 0
-        y: 0
-        z: 30.3
-      Rotation:
-        value:
           x: 0
           y: 0
           z: 0
           w: 1
     m_MetaData:
-    - Mode: 2
-      Tension: 0.5
-    - Mode: 2
-      Tension: 0.5
     - Mode: 2
       Tension: 0.5
     - Mode: 2
@@ -1353,13 +1315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinematicCam: {fileID: 1600886316703178186}
-  targetImage: {fileID: 1186109538}
   rotationDuration: 7
   followTarget: {fileID: 7867108539948366804}
   followDelay: 3
   cinematicDuration: 5
-  spline: {fileID: 742685377}
-  vuelo: {fileID: 2875265820503790313}
 --- !u!4 &909860409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cac04fb0b69cced4899717f9ed93a536, type: 3}

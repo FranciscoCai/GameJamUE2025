@@ -4,6 +4,8 @@ using UnityEngine.Splines;
 public class CinematicaSplines : MonoBehaviour
 {
     private SplineContainer splineContainer;
+    public GameObject targetImage;
+    public VueloDeBeluga vuelo;
     public Transform target;
     public float speed = 1f;
 
@@ -26,6 +28,12 @@ public class CinematicaSplines : MonoBehaviour
 
         target.position = pos;
         target.rotation = Quaternion.LookRotation(tangent, up);
+        if (IsFinished())
+        {
+            vuelo.enabled = true;
+            targetImage.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 
     public bool IsFinished() => t >= 1f;

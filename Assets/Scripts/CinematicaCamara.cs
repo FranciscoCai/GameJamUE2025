@@ -6,16 +6,12 @@ using static UnityEngine.GraphicsBuffer;
 public class CinematicaCamara : MonoBehaviour
 {
     public Transform cinematicCam;
-    public GameObject targetImage;
     private Vector3 camStartRot;         
     public float rotationDuration = 7f;
 
     public Transform followTarget;          
     public float followDelay = 5f;          
     public float cinematicDuration = 25f;
-
-    public CinematicaSplines spline;
-    public VueloDeBeluga vuelo;     
 
     private bool following = false;
 
@@ -49,11 +45,6 @@ public class CinematicaCamara : MonoBehaviour
 
         yield return new WaitForSeconds(followDelay);
         following = true;
-
-        yield return new WaitForSeconds(cinematicDuration);
-        vuelo.enabled = true;
-        targetImage.SetActive(true);
-        Destroy(gameObject);
     }
 
     void LateUpdate()
