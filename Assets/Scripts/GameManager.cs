@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public BelugaOnTrack belugaOnTrack;
+
     public int score;
     public float dropSpeed;
     public float dropBoost;
@@ -21,8 +23,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Instance = this;
-        
+        Instance = this;       
     }
 
     public void AddNote()
@@ -36,7 +37,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        cafeini -= dropSpeed * Time.deltaTime;
+        if(belugaOnTrack.onTrack)
+        {
+            cafeini = cafeini;
+        }
+        else
+        {
+            cafeini -= dropSpeed * Time.deltaTime;
+        }
         cafeiniBar.fillAmount = cafeini/100f;
         bool isBoosting = boostAction.action.IsPressed();
         if (isBoosting)
