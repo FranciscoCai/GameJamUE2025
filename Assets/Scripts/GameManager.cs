@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
     {
         score++;
     }
+    public void PowerUp()
+    {
+        
+    }
+
     private void Update()
     {
         cafeini -= dropSpeed * Time.deltaTime;
