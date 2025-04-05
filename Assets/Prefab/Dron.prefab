@@ -216,10 +216,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  lookAction: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   boostAction: {fileID: -2099379676528639254, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   cam: {fileID: 5319951437464195298}
   camOffset: {x: 0, y: 3, z: -6}
   camSmoothSpeed: 5
+  lookSensitivity: 2
+  maxLookAngleX: 45
+  maxLookAngleY: 20
+  returnSpeed: 5
   forwardSpeed: 10
   boostMultiplier: 4
   verticalSpeed: 5
