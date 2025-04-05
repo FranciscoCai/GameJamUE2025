@@ -5,6 +5,7 @@ public class VueloDeBeluga : MonoBehaviour
 {
     [Header("Input Actions")]
     public InputActionReference moveAction;
+    public InputActionReference lookAction;
     public InputActionReference boostAction;
 
     [Header("Camera")]
@@ -12,6 +13,14 @@ public class VueloDeBeluga : MonoBehaviour
     public Vector3 camOffset = new Vector3(0, 3, -6);
     private Vector3 initialCamOffset = new Vector3(0, 3, -6);
     public float camSmoothSpeed = 5f;
+
+    [Header("Free Look Settings")]
+    public float lookSensitivity = 2f;
+    public float maxLookAngleX = 45f; // izquierda/derecha
+    public float maxLookAngleY = 20f; // arriba/abajo
+    public float returnSpeed = 5f;
+
+    private Vector2 lookOffset = Vector2.zero;
 
     [Header("Drone Settings")]
     public float forwardSpeed;
@@ -54,7 +63,24 @@ public class VueloDeBeluga : MonoBehaviour
 
         if (cam != null)
         {
-            Vector3 desiredPosition = transform.position + transform.rotation * camOffset;
+            Vector2 lookInput = lookAction.action.ReadValue<Vector2>();
+
+            if (lookInput.sqrMagnitude > 0.01f)
+            {
+                // Acumula el movimiento del stick derecho para desplazar la cámara
+                lookOffset += lookInput * lookSensitivity;
+                lookOffset.x = Mathf.Clamp(lookOffset.x, -maxLookAngleX, maxLookAngleX);
+                lookOffset.y = Mathf.Clamp(lookOffset.y, -maxLookAngleY, maxLookAngleY);
+            }
+            else
+            {
+                // Vuelve al centro suavemente
+                lookOffset = Vector2.Lerp(lookOffset, Vector2.zero, Time.deltaTime * returnSpeed);
+            }
+
+            // Calcula rotación de la cámara
+            Quaternion lookRotation = Quaternion.Euler(-lookOffset.y, lookOffset.x, 0);
+            Vector3 desiredPosition = transform.position + (lookRotation * (transform.rotation * camOffset));
             cam.position = Vector3.Lerp(cam.position, desiredPosition, camSmoothSpeed * Time.deltaTime);
             cam.LookAt(transform.position + Vector3.up * 1.5f);
         }
