@@ -8,6 +8,7 @@ public class ConectaUnMando : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;  
     public TextMeshProUGUI textMeshPro2;
+    public GameObject MenuInicial;
     public float fadeSpeed = 1f;  
     private float alpha = 1f;          
     private bool fadingOut = true;  
@@ -68,6 +69,7 @@ public class ConectaUnMando : MonoBehaviour
 
             currentTime -= Time.deltaTime;
         }
+        MenuInicial.SetActive(true);
         Destroy(gameObject);
         return null;
     }
