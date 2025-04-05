@@ -71,6 +71,5 @@ public class PulsaStart : MonoBehaviour
             yield return null;
         }
         ContextText.SetActive(true);
-        SceneManager.LoadScene(2);
     }
 }

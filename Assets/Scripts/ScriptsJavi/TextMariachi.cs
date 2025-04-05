@@ -1,25 +1,31 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextMariachi : MonoBehaviour
 {
-    public TMP_Text textComponent;
-    public float Speed;
-    public string Context;
-    private void Start()
-    {
-        StartCoroutine(TypeWords(Context));
-    }
-    private IEnumerator TypeWords(string fullText)
-    {
-        textComponent.text = "";
-        string[] words = fullText.Split(' ');
+    public TMP_Text textMeshPro;
+    [TextArea]
+    public string fullText;
+    public float delay = 0.05f; // tiempo entre letras
+    public float finalDelay = 0.05f; // tiempo entre letras
 
-        for (int i = 0; i < words.Length; i++)
+    void Start()
+    {
+        StartCoroutine(ShowText());
+    }
+
+    IEnumerator ShowText()
+    {
+        textMeshPro.text = ""; // Limpiar texto al inicio
+
+        for (int i = 0; i <= fullText.Length; i++)
         {
-            textComponent.text += words[i] + " ";
-            yield return new WaitForSeconds(Speed);
+            textMeshPro.text = fullText.Substring(0, i);
+            yield return new WaitForSeconds(delay);
         }
+        yield return new WaitForSeconds(finalDelay);
+        SceneManager.LoadScene(2);
     }
 }
