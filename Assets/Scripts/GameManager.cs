@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -43,6 +44,10 @@ public class GameManager : MonoBehaviour
         if (isBoosting)
         {
             cafeini -= dropBoost * Time.deltaTime;
+        }
+        if(cafeini<=0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
