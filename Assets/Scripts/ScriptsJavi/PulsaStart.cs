@@ -49,7 +49,7 @@ public class PulsaStart : MonoBehaviour
         if (isPressing && !loading)
         {
             loading = true;
-            UpdateBlinkInterval(0.2f);
+            UpdateBlinkInterval(0.1f);
             StartCoroutine(FadeOutCoroutine());
         }
     }
