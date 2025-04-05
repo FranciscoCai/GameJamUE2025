@@ -5,6 +5,7 @@ public class VueloDeBeluga : MonoBehaviour
 {
     [Header("Input Actions")]
     public InputActionReference moveAction;
+    public InputActionReference boostAction;
 
     [Header("Camera")]
     public Transform cam;
@@ -13,7 +14,8 @@ public class VueloDeBeluga : MonoBehaviour
     public float camSmoothSpeed = 5f;
 
     [Header("Drone Settings")]
-    public float forwardSpeed = 10f;
+    public float forwardSpeed;
+    public float boostMultiplier = 2f;
     public float verticalSpeed = 5f;
     public float turnSpeed = 60f;
     public float rotateVelocity;
@@ -38,9 +40,13 @@ public class VueloDeBeluga : MonoBehaviour
     void Update()
     {
         Vector2 input = moveAction.action.ReadValue<Vector2>();
+
+        bool isBoosting = boostAction.action.IsPressed();
+        float currentSpeed = forwardSpeed * (isBoosting ? boostMultiplier : 1f);
+
         float vertical = input.y * verticalSpeed * Time.deltaTime;
         transform.position += Vector3.up * vertical;
-        transform.position += transform.forward * forwardSpeed * Time.deltaTime;
+        transform.position += transform.forward * currentSpeed * Time.deltaTime;
         float turn = input.x * turnSpeed * Time.deltaTime;
         transform.Rotate(0f, turn, 0f);
 
