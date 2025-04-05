@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5827712970444380749}
   - component: {fileID: 19514175053085671}
   m_Layer: 0
-  m_Name: SmokeEffectConstant
+  m_Name: ConstantSmokeEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
