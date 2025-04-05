@@ -11,7 +11,8 @@ public class PulsaStart : MonoBehaviour
 
     public GameObject targetObject;    
     public float blinkInterval = 0.5f;  
-    public Image image; 
+    public Image image;
+    public GameObject ContextText;
 
     private Coroutine blinkCoroutine;
 
@@ -69,6 +70,7 @@ public class PulsaStart : MonoBehaviour
             image.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             yield return null;
         }
+        ContextText.SetActive(true);
         SceneManager.LoadScene(2);
     }
 }
