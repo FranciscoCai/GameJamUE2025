@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4688746117478667638}
   m_Layer: 0
   m_Name: Dron
-  m_TagString: Untagged
+  m_TagString: Beluga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 9127156702375775459}
   m_Layer: 0
   m_Name: Maya
-  m_TagString: Untagged
+  m_TagString: Beluga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
