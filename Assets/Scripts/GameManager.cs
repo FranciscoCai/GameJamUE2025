@@ -30,9 +30,9 @@ public class GameManager : MonoBehaviour
     {
         score++;
     }
-    public void PowerUp()
+    public void PowerUp(float amount)
     {
-        
+        cafeini += amount;
     }
 
     private void Update()
