@@ -225,7 +225,7 @@ MonoBehaviour:
   verticalSpeed: 5
   turnSpeed: 30
   rotateVelocity: 3
-  CameraYVelocity: 25
+  CameraYVelocity: 15
   maxOffsetX: 2
   minOffsetX: -2
   maxOffsetY: 3
@@ -302,7 +302,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 6}
-  m_Center: {x: 0, y: 0, z: 0.8}
+  m_Center: {x: 0, y: 1.2, z: 0.8}
 --- !u!1001 &2006972949343439892
 PrefabInstance:
   m_ObjectHideFlags: 0

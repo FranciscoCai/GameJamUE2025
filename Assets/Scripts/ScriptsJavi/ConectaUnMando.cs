@@ -12,6 +12,7 @@ public class ConectaUnMando : MonoBehaviour
     public float fadeSpeed = 1f;  
     private float alpha = 1f;          
     private bool fadingOut = true;  
+    private bool fadingIn = false;
     private float timeElapsed = 0f;  
 
     void Update()
@@ -46,10 +47,11 @@ public class ConectaUnMando : MonoBehaviour
         currentColor.a = alpha;
         textMeshPro.color = currentColor;
 
-        if (Gamepad.all.Count > 0)
+        if (Gamepad.all.Count > 0 && !fadingIn)
         {
             // Si hay al menos un Gamepad conectado
             Debug.Log("Mando conectado.");
+            fadingIn = true;
             StartCoroutine(CountdownCoroutine());  
         }
         else
@@ -70,8 +72,8 @@ public class ConectaUnMando : MonoBehaviour
             currentTime -= Time.deltaTime;
         }
         MenuInicial.SetActive(true);
-        Destroy(gameObject);
-        return null;
+        gameObject.SetActive(false);
+        yield return null;
     }
 }
 

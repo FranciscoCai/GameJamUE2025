@@ -15,6 +15,7 @@ public class VueloDeBeluga : MonoBehaviour
 
     [Header("Drone Settings")]
     public float forwardSpeed;
+    private float currentSpeed;
     public float boostMultiplier = 2f;
     public float verticalSpeed = 5f;
     public float turnSpeed = 60f;
@@ -42,7 +43,8 @@ public class VueloDeBeluga : MonoBehaviour
         Vector2 input = moveAction.action.ReadValue<Vector2>();
 
         bool isBoosting = boostAction.action.IsPressed();
-        float currentSpeed = forwardSpeed * (isBoosting ? boostMultiplier : 1f);
+        float targetSpeed = isBoosting ? forwardSpeed * boostMultiplier : forwardSpeed;
+        currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, 10 * Time.deltaTime);
 
         float vertical = input.y * verticalSpeed * Time.deltaTime;
         transform.position += Vector3.up * vertical;
