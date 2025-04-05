@@ -116,9 +116,9 @@ MonoBehaviour:
   returnSpeed: 5
   forwardSpeed: 10
   boostMultiplier: 4
-  verticalSpeed: 5
-  turnSpeed: 30
-  rotateVelocity: 3
+  verticalSpeed: 7.5
+  turnSpeed: 45
+  rotateVelocity: 1.5
   CameraYVelocity: 15
   maxOffsetX: 2
   minOffsetX: -2

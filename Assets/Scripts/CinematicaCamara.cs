@@ -30,7 +30,7 @@ public class CinematicaCamara : MonoBehaviour
 
         Vector3 startPos = cinematicCam.position;
         
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
 
         while (timer < rotationDuration)
         {
