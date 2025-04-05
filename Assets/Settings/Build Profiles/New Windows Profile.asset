@@ -19,7 +19,11 @@ MonoBehaviour:
     rid: 436689841515921408
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/Francsisco.unity
+    m_path: Assets/Scenes/Francisco2.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/GameOver.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/DronDemo.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []

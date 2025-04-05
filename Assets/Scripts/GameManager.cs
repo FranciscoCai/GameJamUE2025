@@ -38,8 +38,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         cafeini -= dropSpeed * Time.deltaTime;
-        RectTransform rt = cafeiniBar.GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(cafeini, rt.sizeDelta.y);
+        cafeiniBar.fillAmount = cafeini/100f;
         bool isBoosting = boostAction.action.IsPressed();
         if (isBoosting)
         {
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
         if(cafeini<=0)
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("DronDemo");
         }
     }
 }
