@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 9182615283042351237}
   - component: {fileID: 8527844715758384796}
   - component: {fileID: 2345848750951169606}
+  - component: {fileID: 6337849953580303541}
   m_Layer: 0
   m_Name: DronBueno
   m_TagString: Beluga
@@ -89,7 +90,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2037849309440370214}
-  - {fileID: 2471321070292847038}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9182615283042351237
@@ -237,6 +237,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6337849953580303541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558330171604329799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ecf5e03a26c2064d9eb07d87fb1346a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTrack: 0
+  particleSystem: {fileID: 0}
+  newColor: {r: 1, g: 0, b: 0, a: 1}
+  detectionRadius: 15
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7594154439612859888
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +294,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1257694449641538980}
+    m_TransformParent: {fileID: 6352803578792327037}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalScale.x
@@ -290,23 +310,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.110001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: -1.0800004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.36
+      value: 2.1499991
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -314,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 7.880879e-16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 033f0156e005e63469cdf29df00de77f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -470,7 +490,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c7c1cbda60c773e43a001813d13bab84, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1faed9406e06234aba5172bd64f6622, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2471321070292847038}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a1faed9406e06234aba5172bd64f6622, type: 3}
       insertIndex: -1
