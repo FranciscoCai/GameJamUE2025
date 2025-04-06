@@ -9,6 +9,7 @@ public class CinematicaSplines : MonoBehaviour
     public VueloDeBeluga vuelo;
     public Transform target;
     public float speed = 1f;
+    public GameObject tutorial;
 
 
     private float t = 0f; // posición a lo largo del spline (0 a 1)
@@ -37,6 +38,7 @@ public class CinematicaSplines : MonoBehaviour
             Mariachis.SetActive(true);
             Destroy(gameObject);
             GameManager.Instance.cafeini = 100;
+            tutorial.SetActive(true);
         }
     }
 
