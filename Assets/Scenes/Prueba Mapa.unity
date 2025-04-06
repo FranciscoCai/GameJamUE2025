@@ -1454,8 +1454,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: c7c1cbda60c773e43a001813d13bab84, type: 2}
     - target: {fileID: 8648531128337227713, guid: 2fdcb25b12fb2994d98d8e69aa4cd651, type: 3}
+      propertyPath: speedShader
+      value: 
+      objectReference: {fileID: 1456437542}
+    - target: {fileID: 8648531128337227713, guid: 2fdcb25b12fb2994d98d8e69aa4cd651, type: 3}
+      propertyPath: camZoomSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648531128337227713, guid: 2fdcb25b12fb2994d98d8e69aa4cd651, type: 3}
+      propertyPath: fadeDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648531128337227713, guid: 2fdcb25b12fb2994d98d8e69aa4cd651, type: 3}
       propertyPath: forwardSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648531128337227713, guid: 2fdcb25b12fb2994d98d8e69aa4cd651, type: 3}
+      propertyPath: boostCamDistance
+      value: -12.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

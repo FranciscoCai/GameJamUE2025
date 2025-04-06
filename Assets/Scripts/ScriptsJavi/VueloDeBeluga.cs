@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class VueloDeBeluga : MonoBehaviour
 {
@@ -39,6 +40,12 @@ public class VueloDeBeluga : MonoBehaviour
     [Header("Model Reference")]
     public Transform droneModel;
 
+    [Header("Boost Camera Settings")]
+    public float boostCamDistance = -10f; // Distancia alejada al hacer boost
+    public float camZoomSpeed = 2f; // Qué tan rápido se aleja/acerca
+
+    public Image speedShader;
+
     private Vector3 lastPosition;
 
     void Start()
@@ -61,6 +68,14 @@ public class VueloDeBeluga : MonoBehaviour
         float turn = input.x * turnSpeed * Time.deltaTime;
         transform.Rotate(0f, turn, 0f);
 
+        if(isBoosting)
+        {
+            speedShader.gameObject.SetActive(true);
+        }
+        else
+        {
+            speedShader.gameObject.SetActive(false);
+        }
         if (cam != null)
         {
             Vector2 lookInput = lookAction.action.ReadValue<Vector2>();
@@ -120,6 +135,9 @@ public class VueloDeBeluga : MonoBehaviour
             {
                 camOffset = Vector3.Lerp(camOffset, initialCamOffset, 2 * Time.deltaTime);
             }
+
+            float targetZ = boostAction.action.IsPressed() ? boostCamDistance : initialCamOffset.z;
+            camOffset.z = Mathf.Lerp(camOffset.z, targetZ, Time.deltaTime * camZoomSpeed);
 
             lastPosition = transform.position;
         }
