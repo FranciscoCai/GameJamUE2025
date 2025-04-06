@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -57,7 +57,7 @@ public class TextMariachi : MonoBehaviour
         // Aseguramos que empiece con alpha 1
         textMeshPro.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1f);
 
-        // Fade OUT: alpha de 1 ? 0
+        // Fade OUT: alpha de 1 → 0
         while (timer < duration)
         {
             timer += Time.deltaTime;
@@ -69,3 +69,4 @@ public class TextMariachi : MonoBehaviour
         // Por si acaso, nos aseguramos de dejar el alpha a 0
         textMeshPro.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
     }
+}
