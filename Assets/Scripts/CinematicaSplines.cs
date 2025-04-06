@@ -10,6 +10,7 @@ public class CinematicaSplines : MonoBehaviour
     public Transform target;
     public float speed = 1f;
 
+
     private float t = 0f; // posición a lo largo del spline (0 a 1)
     private void Start()
     {
@@ -35,6 +36,7 @@ public class CinematicaSplines : MonoBehaviour
             targetImage.SetActive(true);
             Mariachis.SetActive(true);
             Destroy(gameObject);
+            GameManager.Instance.cafeini = 100;
         }
     }
 
