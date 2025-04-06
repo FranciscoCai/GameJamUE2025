@@ -30,7 +30,7 @@ public class Vibración : MonoBehaviour
         else
         {
           
-            gamepad.SetMotorSpeeds(0f, 0f);
+            //gamepad.SetMotorSpeeds(0f, 0f);
         }
     }
 
