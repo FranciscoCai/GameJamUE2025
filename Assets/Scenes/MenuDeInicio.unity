@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 1842295258}
   fullText: "En el espacio no es f\xE1cil escuchar, pero puedes sentir las vibraciones.
-    \nSi vibra el mando, hulle o te robar\xE1n la m\xFAsica.\nSigue los caminos y
+    \nSi vibra el mando, huye o te robar\xE1n la m\xFAsica.\nSigue los caminos y
     recupera las notas antes de quedarte sin energ\xEDa."
   delay: 0.1
   finalDelay: 5

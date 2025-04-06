@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
