@@ -6707,7 +6707,7 @@ PrefabInstance:
       objectReference: {fileID: 7867108539948366804}
     - target: {fileID: 4676919643436623803, guid: 9dd3f274a7d791c44a87d04718868de1, type: 3}
       propertyPath: vibrationIntensity
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5986403564700580580, guid: 9dd3f274a7d791c44a87d04718868de1, type: 3}
       propertyPath: target
