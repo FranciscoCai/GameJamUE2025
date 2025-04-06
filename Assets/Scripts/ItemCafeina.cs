@@ -14,7 +14,9 @@ public class ItemCafeina : MonoBehaviour
         if (other.gameObject.CompareTag("Beluga"))
         {
             GameManager.Instance.PowerUp(amount);
+            GameManager.Instance.lata.Play();
             Destroy(gameObject);
         }
+
     }
 }

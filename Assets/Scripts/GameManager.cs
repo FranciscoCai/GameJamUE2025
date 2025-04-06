@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Range(0,100)]public float cafeini;
     public Image cafeiniBar;
     public InputActionReference boostAction;
+    public AudioSource lata;
     public static GameManager Instance { get; set; }
 
     void Awake()
