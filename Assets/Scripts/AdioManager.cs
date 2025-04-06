@@ -1,4 +1,5 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using System.Collections;
 
 public class AdioManager : MonoBehaviour
 {
@@ -8,11 +9,6 @@ public class AdioManager : MonoBehaviour
     public float fadeDuration = 2f;
 
     void Start()
-    {
-        
-    }
-
-    public void StartCrossfade()
     {
         StartCoroutine(CrossfadeAudio());
     }
@@ -25,7 +21,7 @@ public class AdioManager : MonoBehaviour
         float startVolumeIn = 0f;
 
         audioIn.volume = 0f;
-        audioIn.Play(); // ?? empieza a sonar desde el principio de la conversión
+        audioIn.Play();
 
         while (timer < fadeDuration)
         {
@@ -38,11 +34,9 @@ public class AdioManager : MonoBehaviour
             yield return null;
         }
 
-        // Asegura que los volúmenes queden exactos al final
         audioOut.volume = 0f;
         audioIn.volume = 1f;
 
-        // (Opcional) Detener el audio que salió
         audioOut.Stop();
     }
 }

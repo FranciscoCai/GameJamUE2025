@@ -7,7 +7,6 @@ public class CambioCamaraUltimaNota : MonoBehaviour
     public float moveSpeed = 5f;
     public float rotateSpeed = 5f;
     public float stopDistance = 0.01f;
-    public GameObject mariachis;
 
     public IEnumerator CambioCamara()
     {
@@ -33,7 +32,6 @@ public class CambioCamaraUltimaNota : MonoBehaviour
                 // Asegura que la posici¨®n y rotaci¨®n sean exactamente iguales al llegar
                 transform.position = target.position;
                 transform.rotation = target.rotation;
-                mariachis.SetActive(true);
             }
             moveSpeed += Time.deltaTime*10f;
             yield return null;
