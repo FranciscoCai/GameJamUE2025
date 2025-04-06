@@ -87,7 +87,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5185d8b4bab8984faad41344f233830, type: 2}
+  - {fileID: 2100000, guid: 3f9aab3dde2135640961654da793a4c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1355,7 +1355,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f21a9d7ae9fe77f4ea3fb5be58791a98, type: 2}
+  - {fileID: 2100000, guid: 5dec5602a81a1844f8c277016c11c2cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1609,7 +1609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6245291362154024916}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -251.26, y: -260.22897, z: 1036.407}
   m_LocalScale: {x: 7.8589, y: 7.8589, z: 7.8589}
   m_ConstrainProportionsScale: 0
@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  maxDistance: 20
+  maxDistance: 30
   minDistance: 10
   hijos:
   - {fileID: 9053138706169594722}
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  maxDistance: 75
+  maxDistance: 60
   vibrationIntensity: 1
 --- !u!114 &6237405053653152716
 MonoBehaviour:
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8e2037015244c4380fc53dfb2666b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 21
 --- !u!114 &5526456184682865500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,9 +1756,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bcd82200964324085d2e88df3c9368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 50
+  detectionRadius: 60
   moveSpeed: 9
   mariachiMovement: {fileID: 6237405053653152716}
+  reespawn: {fileID: 0}
   detectionLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2446,7 +2447,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 58fdebdd8b72a834d9158d6c5627cbd8, type: 2}
+  - {fileID: 2100000, guid: 986555db4fe89b9448d61bcbfa4b8804, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

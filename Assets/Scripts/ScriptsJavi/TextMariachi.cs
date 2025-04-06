@@ -26,6 +26,6 @@ public class TextMariachi : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
         yield return new WaitForSeconds(finalDelay);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }

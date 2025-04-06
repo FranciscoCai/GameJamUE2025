@@ -1248,8 +1248,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 1842295258}
-  fullText: watyertdufigohpjk[esrtduyfigohpjk[
-  delay: 0.05
+  fullText: "En el espacio no hay sonido. \nPero puedes sentir las vibraciones de
+    los que quieren robarte la m\xFAsica. \nSigue los caminos y recupera las notas
+    antes de quedarte sin energ\xEDa."
+  delay: 0.1
   finalDelay: 5
 --- !u!114 &1842295258
 MonoBehaviour:

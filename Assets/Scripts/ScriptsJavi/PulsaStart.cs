@@ -70,6 +70,6 @@ public class PulsaStart : MonoBehaviour
             image.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             yield return null;
         }
-        SceneManager.LoadScene(1);
+        ContextText.SetActive(true);   
     }
 }
