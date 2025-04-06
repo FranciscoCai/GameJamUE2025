@@ -44,6 +44,11 @@ public class VueloDeBeluga : MonoBehaviour
     public float boostCamDistance = -10f; // Distancia alejada al hacer boost
     public float camZoomSpeed = 2f; // Qué tan rápido se aleja/acerca
 
+    [Header("Camera Shake Settings")]
+    public float shakeIntensity = 0.1f;
+    public float shakeSpeed = 25f;
+    private float shakeTimer = 0f;
+
     public Image speedShader;
 
     private Vector3 lastPosition;
@@ -68,13 +73,15 @@ public class VueloDeBeluga : MonoBehaviour
         float turn = input.x * turnSpeed * Time.deltaTime;
         transform.Rotate(0f, turn, 0f);
 
-        if(isBoosting)
+        if (isBoosting)
         {
             speedShader.gameObject.SetActive(true);
+            shakeTimer += Time.deltaTime * shakeSpeed;
         }
         else
         {
             speedShader.gameObject.SetActive(false);
+            shakeTimer = 0f;
         }
         if (cam != null)
         {
@@ -140,6 +147,12 @@ public class VueloDeBeluga : MonoBehaviour
             camOffset.z = Mathf.Lerp(camOffset.z, targetZ, Time.deltaTime * camZoomSpeed);
 
             lastPosition = transform.position;
+
+            if (boostAction.action.IsPressed())
+            {
+                Vector3 shakeOffset = Random.insideUnitSphere * shakeIntensity;
+                cam.position += shakeOffset;
+            }
         }
     }
 }
