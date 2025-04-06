@@ -8,6 +8,7 @@ public class ChangeAlpha : MonoBehaviour
 
     void Start()
     {
+        objectRenderer = GetComponent<Renderer>();  
         Material mat = objectRenderer.material;
         StartCoroutine(FadeOutMaterial(mat, fadeDuration));
     }
@@ -21,11 +22,11 @@ public class ChangeAlpha : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
+            float newAlpha = Mathf.Lerp(startAlpha, 1f, elapsed / duration);
             mat.color = new Color(color.r, color.g, color.b, newAlpha);
             yield return null;
         }
 
-        mat.color = new Color(color.r, color.g, color.b, 0f);
+        mat.color = new Color(color.r, color.g, color.b, 1f);
     }
 }

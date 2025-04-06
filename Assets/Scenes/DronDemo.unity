@@ -561,6 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14636e8a983964d43b3f4ca1a5234ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  belugaOnTrack: {fileID: 0}
   score: 0
   dropSpeed: 1
   dropBoost: 4

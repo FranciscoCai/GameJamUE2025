@@ -37,23 +37,22 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(belugaOnTrack.onTrack)
+        if (belugaOnTrack != null)
         {
-            cafeini = cafeini;
-        }
-        else
-        {
-            cafeini -= dropSpeed * Time.deltaTime;
+            if (belugaOnTrack.onTrack)
+            {
+                cafeini = cafeini;
+            }
+            else
+            {
+                cafeini -= dropSpeed * Time.deltaTime;
+            }
         }
         cafeiniBar.fillAmount = cafeini/100f;
         bool isBoosting = boostAction.action.IsPressed();
         if (isBoosting)
         {
             cafeini -= dropBoost * Time.deltaTime;
-        }
-        if(cafeini<=0)
-        {
-            SceneManager.LoadScene("GameOver");
         }
     }
 }
