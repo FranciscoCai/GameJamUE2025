@@ -9,13 +9,7 @@ public class ChangeAlpha : MonoBehaviour
     void Start()
     {
         Material mat = objectRenderer.material;
-        SetMaterialToTransparent(mat);
         StartCoroutine(FadeOutMaterial(mat, fadeDuration));
-    }
-
-    void SetMaterialToTransparent(Material mat)
-    {
-
     }
 
     private IEnumerator FadeOutMaterial(Material mat, float duration)
