@@ -5,6 +5,7 @@ public class ChasePlayer : MonoBehaviour
     public float detectionRadius = 15f;       
     public float moveSpeed = 5f;
     public MariachiMovement mariachiMovement;
+    public Transform reespawn;
 
     public LayerMask detectionLayer;
 
@@ -13,7 +14,7 @@ public class ChasePlayer : MonoBehaviour
 
     void Start()
     {
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Beluga");
         if (playerObj != null)
         {
             player = playerObj.transform;
@@ -31,6 +32,12 @@ public class ChasePlayer : MonoBehaviour
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * moveSpeed * Time.deltaTime;
             mariachiMovement.enabled = false;
+
+            if (Vector3.Distance(transform.position, player.position) < 7)
+            {
+                player.position = reespawn.position;
+                GameManager.Instance.cafeini = GameManager.Instance.cafeini - 40;
+            }
         }
         if(!isChasing)
         {
