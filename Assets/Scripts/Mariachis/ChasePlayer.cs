@@ -45,7 +45,7 @@ public class ChasePlayer : MonoBehaviour
         isChasing = false;
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Player"))
+            if (hit.CompareTag("Beluga"))
             {
                 isChasing = true;
                 break;

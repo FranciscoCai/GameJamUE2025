@@ -3,6 +3,7 @@ using UnityEngine.Splines;
 
 public class CinematicaSplines : MonoBehaviour
 {
+    public GameObject Mariachis;
     private SplineContainer splineContainer;
     public GameObject targetImage;
     public VueloDeBeluga vuelo;
@@ -32,6 +33,7 @@ public class CinematicaSplines : MonoBehaviour
         {
             vuelo.enabled = true;
             targetImage.SetActive(true);
+            Mariachis.SetActive(true);
             Destroy(gameObject);
         }
     }

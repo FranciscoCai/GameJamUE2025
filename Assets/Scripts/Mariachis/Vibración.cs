@@ -23,7 +23,7 @@ public class Vibración : MonoBehaviour
 
         if (distance < maxDistance)
         {
-  
+            Debug.Log("Vibrando");
             float intensity = Mathf.Lerp(vibrationIntensity, 0f, distance / maxDistance);
             gamepad.SetMotorSpeeds(intensity, intensity); 
         }

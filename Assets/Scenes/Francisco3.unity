@@ -3905,6 +3905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14636e8a983964d43b3f4ca1a5234ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  belugaOnTrack: {fileID: 0}
   score: 0
   dropSpeed: 1
   dropBoost: 4
@@ -4543,7 +4544,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573052866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -8,6 +8,8 @@ public class TransparenciaMariachio : MonoBehaviour
     public float minDistance = 10f; 
     private Renderer objectRenderer;
     private Material material;
+    public Renderer[] hijos;
+    public Material[] materialHijo;
 
     void Start()
     {
@@ -28,13 +30,26 @@ public class TransparenciaMariachio : MonoBehaviour
         Color color = material.color;
         color.a = alpha;
         material.color = color;
-
+        for(int i = 0; i < hijos.Length; i++)
+        {
+            Color colorHijo = hijos[i].material.color;
+            colorHijo.a = alpha;
+            hijos[i].material.color = colorHijo;
+        }
         if (distance < 10)
         {
             material.SetInt("_Surface",0);
+            for(int i = 0; i < hijos.Length; i++)
+            {
+                materialHijo[i].SetInt("_Surface",0);
+            }
         } else
         {
             material.SetInt("_Surface", 1);
+            for (int i = 0; i < hijos.Length; i++)
+            {
+                materialHijo[i].SetInt("_Surface", 1);
+            }
         }
     }
 }
